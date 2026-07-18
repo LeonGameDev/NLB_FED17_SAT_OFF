@@ -1,0 +1,58 @@
+body{
+    font-family: 'Arial';
+    background-color: #d9d9d9;
+}
+
+.intro{
+    color: #FFCC00;
+    -webkit-text-stroke: 1px black;
+    height: auto;
+}
+
+.introtext1{
+    font-size: 6vw;
+}
+
+.introtext2{
+    font-size: 6vw;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input{
+    padding: 12px 20px;
+    background-color: #EEEEEE;
+}
+
+input::placeholder{
+    opacity: 1;
+    color: black;
+}
+
+img{
+    max-width: 20%;
+}
+
+.m9bayonet{
+    transform: rotate(145deg);
+}
+
+.image{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    
+    
+}
+
+.inputthingy{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 100px;
+    margin-left: -800px;
+}
