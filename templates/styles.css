@@ -65,10 +65,32 @@ img{
     margin-left: -800px;
 }
 
-.signup{
+.signuplink{
     position: relative;
     color: #0088FF;
     padding-left: 85vw;
     font-size: 2vw;
     bottom: 120px;
+}
+
+.inputthing{
+    display: flex;
+    flex-direction: column;
+}
+
+.signup{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 10px;
+}
+
+.asiimov{
+    float: right;
+}
+
+.loginpage{
+    position: relative;
+    color: #0088FF;
+    font-size: 2vw;
 }
