@@ -37,8 +37,15 @@ img{
     max-width: 20%;
 }
 
+.butterflyknife{
+    position: relative;
+    top: 60px;
+}
+
 .m9bayonet{
     transform: rotate(145deg);
+    position: relative;
+    bottom: 50px;
 }
 
 .image{
@@ -50,13 +57,16 @@ img{
 .inputthingy{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    gap: 150px;
+    width: 80%;
+    height: auto;
+    gap: 3vw;
     margin-left: -800px;
 }
 
 .signup{
+    position: relative;
     color: #0088FF;
-    padding-left: 86vw;
+    padding-left: 85vw;
     font-size: 2vw;
+    bottom: 120px;
 }
