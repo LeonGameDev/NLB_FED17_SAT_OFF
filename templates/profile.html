@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Begin Reading{% endblock %}
+{% block content %}
+<section class="panel narrow-panel">
+    <div class="eyebrow">PROFILE</div>
+    <h1>Tell the deck who is asking.</h1>
+    <p class="muted">A nickname is enough. These details are saved in MySQL as part of the database exercise.</p>
+
+    {% if error %}<div class="error-box">{{ error }}</div>{% endif %}
+
+    <form class="form-stack" method="____"> <!-- TASK 3 | Example: method="POST" -->
+        <label>
+            <span>Name or nickname</span>
+            <!-- TASK 4 | Example: name="username" -->
+            <input type="text" name="________" maxlength="50" required placeholder="Example: Luna">
+        </label>
+        <label>
+            <span>Birthday <small>(optional)</small></span>
+            <input type="date" name="birth_date">
+        </label>
+        <label>
+            <span>Current mood</span>
+            <select name="____________"> <!-- TASK 5 | Example: name="favorite_color" -->
+                <option>Curious</option>
+                <option>Calm</option>
+                <option>Excited</option>
+                <option>Confused</option>
+                <option>Hopeful</option>
+                <option>Tired</option>
+                <option>Focused</option>
+            </select>
+        </label>
+        <label>
+            <span>What is on your mind most?</span>
+            <select name="_____________"> <!-- TASK 6 | Example: name="school_subject" -->
+                <option>Future</option>
+                <option>School</option>
+                <option>Friendship</option>
+                <option>Family</option>
+                <option>Creativity</option>
+                <option>Confidence</option>
+                <option>Change</option>
+            </select>
+        </label>
+        <button class="primary-btn full-btn" type="______">Continue</button> <!-- TASK 7 | Example: type="submit" -->
+    </form>
+</section>
+{% endblock %}

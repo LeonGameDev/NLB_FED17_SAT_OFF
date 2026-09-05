@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}{{ reading.card_name }}{% endblock %}
+{% block content %}
+<section class="result-layout">
+    <div class="reveal-column">
+        <div class="eyebrow">YOUR CARD</div>
+        <div class="tarot-stage">
+            <div class="tarot-card revealed">
+                <div class="card-inner-frame">
+                    <div class="card-small">{{ reading.arcana }}</div>
+                    <div class="card-rank">{{ reading.rank_name }}</div>
+                    <div class="card-title">{{ reading.card_name }}</div>
+                    {% if reading.suit %}<div class="card-suit">Suit of {{ reading.suit }}</div>{% endif %}
+                    <div class="divider"></div>
+                    <div class="card-keywords">{{ reading.keywords }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reading-copy">
+        <div class="profile-chip">{{ reading.profile_name }} / {{ reading.zodiac_sign }} / {{ reading.current_mood }} / {{ reading.current_focus }}</div>
+        <h1>{{ __________________ }}</h1> {# TASK 36 | Example: {{ student.name }} #}
+        <p class="lead">{{ reading.meaning }}</p>
+
+        <div class="reading-block">
+            <span>Keywords</span>
+            <p>{{ reading.keywords }}</p>
+        </div>
+        <div class="reading-block">
+            <span>Reflection</span>
+            <p>{{ reading.advice }}</p>
+        </div>
+        <div class="reading-block">
+            <span>Database category</span>
+            <p>{{ reading.arcana }}{% if reading.suit %}, Suit of {{ reading.suit }}{% endif %}</p>
+        </div>
+
+        <div class="result-actions">
+            <a class="primary-btn" href="{{ url_for('quiz') }}">New Random Reading</a>
+            <a class="ghost-btn link-btn" href="{{ url_for('history') }}">View History</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

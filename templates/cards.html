@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}All 78 Cards{% endblock %}
+{% block content %}
+<section class="deck-page">
+    <div class="eyebrow">DATABASE CARD LIBRARY</div>
+    <h1>All 78 cards</h1>
+    <p class="muted">This page is generated from the cards table in MySQL.</p>
+
+    <div class="deck-grid">
+        {% for card in ____ %} {# BONUS 38 | Example: {% for item in items %} #}
+        <article class="deck-card">
+            <div class="card-small">{{ card.arcana }}</div>
+            <h2>{{ card.name }}</h2>
+            <p>{% if card.suit %}{{ card.suit }} / {% endif %}{{ card.rank_name }}</p>
+            <small>{{ card.keywords }}</small>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

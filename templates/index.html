@@ -1,37 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEST csgo gambling SITE!!!</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-    <body>
+{% extends 'base.html' %}
+{% block title %}Nocturne Tarot{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="eyebrow">PERSONALITY TAROT EXPERIENCE</div>
+    <p class="deck-count">FULL 78 CARD DECK</p>
+    <h1>Answer the unknown. Reveal one card.</h1>
+    <p class="hero-copy">
+        Enter a few personal details, receive a random set of questions, and let your answers determine which card in the full deck matches your current pattern.
+    </p>
+    <div class="hero-actions">
+        <a class="primary-btn" href="{{ url_for('begin') }}">Begin Reading</a>
+        <a class="ghost-btn link-btn" href="{{ url_for('cards') }}">Explore 78 Cards</a>
+    </div>
 
-        <div class="top-icon">Change Theme here</div>
-
-        <div class="header">
-            <div class="site-title">csgocaseopening.com</div>
-            <h1 class="main-headline">LOG IN TO GET UR FREE 5<br>LUCKY ROLLS</h1>
-        </div>
-
-        <div class="login-row">
-
-            <div class="knife-column">
-                <img src="butterflyknife.png" alt="Butterfly Knife" class="knife-img knife-top">
-                <img src="m9bayonet.png" alt="M9 Bayonet" class="knife-img knife-bottom">
-            </div>
-
-            <div class="input-column">
-                <input type="text" placeholder="USERNAME">
-                <input type="text" placeholder="PASSWORD">
-                
-                <div class="signup-wrap">
-                    <a href="signup.html" class="signup-link">sign up here!!!!</a>
-                </div>
-            </div>
-
-        </div>
-    </body>
-    <script src="main.js"></script>
-</html>
+    <div class="mini-grid">
+        <div><span>01</span><strong>Profile</strong><small>Store basic information in MySQL.</small></div>
+        <div><span>02</span><strong>Random Questions</strong><small>Ten questions are selected from a pool of 78 database questions.</small></div>
+        <div><span>03</span><strong>Card Match</strong><small>Flask scores traits and matches a card.</small></div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Reading History{% endblock %}
+{% block content %}
+<section class="panel history-panel">
+    <div class="eyebrow">DATABASE HISTORY</div>
+    <h1>{{ name }}'s readings</h1>
+    <p class="muted">Each row below comes from the readings table joined with the cards table.</p>
+
+    {% if readings %}
+    <div class="history-list">
+        {% for r in ________ %} {# BONUS 37 | Example: {% for student in students %} #}
+        <a class="history-item" href="{{ url_for('result', reading_id=r.id) }}">
+            <div>
+                <strong>{{ r.card_name }}</strong>
+                <small>{{ r.arcana }}{% if r.suit %} / {{ r.suit }}{% endif %}</small>
+                <small>{{ r.created_at.strftime('%d %b %Y at %H:%M') }}</small>
+            </div>
+            <span>View</span>
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+        <div class="empty-state">No readings yet.</div>
+    {% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Random Questions{% endblock %}
+{% block content %}
+<section class="quiz-wrap" id="quizApp">
+    <div class="quiz-top">
+        <div>
+            <div class="eyebrow">RANDOM READING</div>
+            <h1>{{ name }}, choose the answer that feels closest.</h1>
+            <p class="muted">This set is randomized. A new reading may show different questions and answer order.</p>
+        </div>
+        <div class="progress-label"><span id="questionNumber">1</span> / {{ questions|length }}</div>
+    </div>
+
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+    {% for q in questions %}
+    <article class="question-card {% if not loop.first %}hidden{% endif %}" data-question-index="{{ loop.index0 }}">
+        <div class="question-number">QUESTION {{ loop.index }}</div>
+        <h2>{{ _______________ }}</h2> {# TASK 8 | Example: {{ student.name }} #}
+        <div class="answer-list">
+            {% for option in q.options %}
+            <button type="button" class="answer-btn" data-option-id="{{ _________ }}" {# TASK 9 | Example: {{ product.id }} #}>
+                <span class="answer-letter">{{ ['A','B','C','D'][loop.index0] }}</span>
+                <span>{{ __________________ }}</span> {# TASK 10 | Example: {{ product.name }} #}
+            </button>
+            {% endfor %}
+        </div>
+    </article>
+    {% endfor %}
+
+    <div class="quiz-nav">
+        <button type="button" class="ghost-btn" id="backBtn" disabled>Back</button>
+        <div class="quiz-message" id="quizMessage" aria-live="polite"></div>
+    </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>window.TAROT_QUIZ_COUNT = {{ questions|length }};</script>
+{% endblock %}
